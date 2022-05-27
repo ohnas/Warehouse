@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="{{ url_for('waybill.upload_waybill') }}" method="post" enctype="multipart/form-data">
+    <label for="smartstore">스마트스토어</label>
+    <input type="file" name="waybill_file"/ id="smartstore">
+    <input type="submit"/>
+</form>
+
+<a href="{{ url_for('waybill.export_to_waybill') }}">
+    <button>Export to waybill</button>
+</a>
+{% endblock %}

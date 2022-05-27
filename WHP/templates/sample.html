@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+    <form action="{{ url_for('sample.upload_smartstore_sample') }}" method="post" enctype="multipart/form-data">
+        <label for="smartstore">스마트스토어</label>
+        <input type="file" name="smartstore_file" id="smartstore"/>
+        <input type="submit"/>
+    </form>
+    <a href="{{ url_for('sample.export_to_smartstore_sample') }}">
+        <button>Export to sample</button>
+    </a>
+</div>
+
+<div>
+    <form action="{{ url_for('sample.upload_todayhome_sample') }}" method="post" enctype="multipart/form-data">
+        <label for="todayhome">오늘의 집</label>
+        <input type="file" name="todayhome_file" id="todayhome"/>
+        <input type="submit"/>
+    </form>
+    <a href="{{ url_for('sample.export_to_sample') }}">
+        <button>Export to sample</button>
+    </a>
+</div>
+
+
+{% endblock %}
